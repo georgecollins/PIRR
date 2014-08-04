@@ -511,6 +511,13 @@ int TriBack(int w) {
   return 7;
 }
 
+int TriLeft(int w) {
+  return w;
+}
+
+int TriRight(int w) {
+  return w;
+}
 
 void Stand(int w) {
      w= (w/3)*3;
@@ -534,16 +541,29 @@ void loop() {
   Serial.print("Walkphase ");
   Serial.println(walkphase);
   */
-  if (asig==129) { 
-       walkphase = TriWalk(0);  //BasicWalk(walkphase);  
-  } else {
-    if (asig==130) {
-        walkphase = TriBack(walkphase);  // was walkphase
-    } else {
-       Stand(0);  // walkphase
-    }
+  
+  switch (asig) {
+    case 128:
+      // Stand
+      Stand(0);  // walkphase
+      break;
+    case 129:
+      // Forward
+      walkphase = TriWalk(0);  //BasicWalk(walkphase);  
+      break;
+    case 130:
+      // Backward
+      walkphase = TriBack(walkphase);  // was walkphase
+      break;
+    case 131:
+      // Left
+      walkphase = TriLeft(walkphase);
+      break;
+    case 132:
+      // right
+      walkphase = TriRight(walkphase);
+      break;
   }
- 
   return; 
 
   
