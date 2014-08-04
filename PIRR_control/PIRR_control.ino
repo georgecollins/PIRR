@@ -17,7 +17,8 @@ int walkdir;
 #define FORWARD 1
 #define STAND 0
 #define BACKWARD 2
-
+#define LEFT 3
+#define RIGHT 4
 // when you send a servo signal you switch mode by implication
 
 #define SIG_SRV0_UP 1
@@ -89,7 +90,15 @@ void OutputWalkdir(int xValue, int yValue) {
       walkdir = BACKWARD;
     }
     else
-      walkdir = STAND;
+      if (xValue > 400) {
+        walkdir = LEFT;
+      }
+      else {
+        if (xValue < - 400) {
+           walkdir = RIGHT;
+        } else
+            walkdir = STAND;
+      }
   }  
   
   // y - 400 forward
@@ -109,6 +118,14 @@ void OutputWalkdir(int xValue, int yValue) {
       Esplora.writeRGB(255,0,0);
       signal(130);
       break;
+    case LEFT:
+      Esplora.writeRGB(128, 128, 0);
+      signal(131);
+      break;
+    case RIGHT:
+      Esplora.writeRGB(0, 128, 128);
+      signal(132);
+      break;  
   }
   
 
