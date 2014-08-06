@@ -209,6 +209,95 @@ void fillwalkdat() {
   walkdat[5].servopos[LBH_SERVO] = LBH_FWD;
   walkdat[5].time = 10; // how many times *20 you do the change
 
+/*
+  ******** TRI RIGHT *******
+*/
+
+
+  triright[7].servopos[RFV_SERVO] = RFV_DN; 
+  triright[7].servopos[RFH_SERVO] = RFH1;
+  triright[7].servopos[LFV_SERVO] = LFV_DN;
+  triright[7].servopos[LFH_SERVO] = LFH_MID;
+  triright[7].servopos[RBV_SERVO] = RBV_DN;
+  triright[7].servopos[RBH_SERVO] = RBH5;
+  triright[7].servopos[LBV_SERVO] = LBV_DN;
+  triright[7].servopos[LBH_SERVO] = LBH_MID;
+  triright[7].time = 1; // how many times *20 you do the change
+
+  triright[6].servopos[RFV_SERVO] = RFV_DN; 
+  triright[6].servopos[RFH_SERVO] = RFH2;
+  triright[6].servopos[LFV_SERVO] = LFV_DN;
+  triright[6].servopos[LFH_SERVO] = LFH_MID;
+  triright[6].servopos[RBV_SERVO] = RBV_DN;
+  triright[6].servopos[RBH_SERVO] = RBH6;
+  triright[6].servopos[LBV_SERVO] = LBV_DN;
+  triright[6].servopos[LBH_SERVO] = LBH_MID;
+  triright[6].time = 1; // how many times *20 you do the change
+
+  triright[5].servopos[RFV_SERVO] = RFV_DN; 
+  triright[5].servopos[RFH_SERVO] = RFH3;
+  triright[5].servopos[LFV_SERVO] = LFV_DN;
+  triright[5].servopos[LFH_SERVO] = LFH_MID;
+  triright[5].servopos[RBV_SERVO] = RBV_UP;
+  triright[5].servopos[RBH_SERVO] = RBH3;
+  triright[5].servopos[LBV_SERVO] = LBV_DN;
+  triright[5].servopos[LBH_SERVO] = LBH_MID;
+  triright[5].time = 1; // how many times *20 you do the change
+
+  triright[4].servopos[RFV_SERVO] = RFV_DN; 
+  triright[4].servopos[RFH_SERVO] = RFH4;
+  triright[4].servopos[LFV_SERVO] = LFV_UP;
+  triright[4].servopos[LFH_SERVO] = LFH_MID;
+  triright[4].servopos[RBV_SERVO] = RBV_DN;
+  triright[4].servopos[RBH_SERVO] = RBH0;
+  triright[4].servopos[LBV_SERVO] = LBV_DN;
+  triright[4].servopos[LBH_SERVO] = LBH_MID;
+  triright[4].time = 1; // how many times *20 you do the change
+  
+  triright[3].servopos[RFV_SERVO] = RFV_DN; 
+  triright[3].servopos[RFH_SERVO] = RFH5;
+  triright[3].servopos[LFV_SERVO] = LFV_DN;
+  triright[3].servopos[LFH_SERVO] = LFH_MID;
+  triright[3].servopos[RBV_SERVO] = RBV_DN;
+  triright[3].servopos[RBH_SERVO] = RBH1;
+  triright[3].servopos[LBV_SERVO] = LBV_DN;
+  triright[3].servopos[LBH_SERVO] = LBH_MID;
+  triright[3].time = 1; // how many times *20 you do the change
+
+  triright[2].servopos[RFV_SERVO] = RFV_DN; 
+  triright[2].servopos[RFH_SERVO] = RFH6;
+  triright[2].servopos[LFV_SERVO] = LFV_DN;
+  triright[2].servopos[LFH_SERVO] = LFH_MID;
+  triright[2].servopos[RBV_SERVO] = RBV_DN;
+  triright[2].servopos[RBH_SERVO] = RBH2;
+  triright[2].servopos[LBV_SERVO] = LBV_UP;
+  triright[2].servopos[LBH_SERVO] = LBH_MID;
+  triright[2].time = 1; // how many times *20 you do the change
+
+  triright[1].servopos[RFV_SERVO] = RFV_UP; 
+  triright[1].servopos[RFH_SERVO] = RFH3;
+  triright[1].servopos[LFV_SERVO] = LFV_DN;
+  triright[1].servopos[LFH_SERVO] = LFH_MID;
+  triright[1].servopos[RBV_SERVO] = RBV_DN;
+  triright[1].servopos[RBH_SERVO] = RBH3;
+  triright[1].servopos[LBV_SERVO] = LBV_DN;
+  triright[1].servopos[LBH_SERVO] = LBH_MID;
+  triright[1].time = 1; // how many times *20 you do the change
+
+  triright[0].servopos[RFV_SERVO] = RFV_DN; 
+  triright[0].servopos[RFH_SERVO] = RFH0;
+  triright[0].servopos[LFV_SERVO] = LFV_DN;
+  triright[0].servopos[LFH_SERVO] = LFH_MID;
+  triright[0].servopos[RBV_SERVO] = RBV_DN;
+  triright[0].servopos[RBH_SERVO] = RBH4;
+  triright[0].servopos[LBV_SERVO] = LBV_DN;
+  triright[0].servopos[LBH_SERVO] = LBH_MIO;
+  triright[0].time = 1; // how many times *20 you do the change
+
+
+/*
+  ********** TRI WALK **********
+*/
 
   triwalk[7].servopos[RFV_SERVO] = RFV_DN; 
   triwalk[7].servopos[RFH_SERVO] = RFH1;
@@ -228,7 +317,6 @@ void fillwalkdat() {
   triwalk[6].servopos[RBH_SERVO] = RBH6;
   triwalk[6].servopos[LBV_SERVO] = LBV_DN;
   triwalk[6].servopos[LBH_SERVO] = LBH3;
-
   triwalk[6].time = 1; // how many times *20 you do the change
 
   triwalk[5].servopos[RFV_SERVO] = RFV_DN; 
@@ -290,6 +378,7 @@ void fillwalkdat() {
   triwalk[0].servopos[LBV_SERVO] = LBV_DN;
   triwalk[0].servopos[LBH_SERVO] = LBH1;
   triwalk[0].time = 1; // how many times *20 you do the change
+
 }
 
 
