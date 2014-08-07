@@ -137,6 +137,8 @@ typedef struct pose {
 
 Pose walkdat[6];
 Pose triwalk[8];
+Pose trileft[8];
+Pose triright[8];
 
 int walkphase;  // 0 - 6
 
@@ -291,7 +293,7 @@ void fillwalkdat() {
   triright[0].servopos[RBV_SERVO] = RBV_DN;
   triright[0].servopos[RBH_SERVO] = RBH4;
   triright[0].servopos[LBV_SERVO] = LBV_DN;
-  triright[0].servopos[LBH_SERVO] = LBH_MIO;
+  triright[0].servopos[LBH_SERVO] = LBH_MID;
   triright[0].time = 1; // how many times *20 you do the change
 
 
@@ -300,7 +302,7 @@ void fillwalkdat() {
 */
 
   trileft[7].servopos[RFV_SERVO] = RFV_DN; 
-  trileft[7].servopos[RFH_SERVO] = RFH_MID
+  trileft[7].servopos[RFH_SERVO] = RFH_MID;
   trileft[7].servopos[LFV_SERVO] = LFV_DN;
   trileft[7].servopos[LFH_SERVO] = LFH4;
   trileft[7].servopos[RBV_SERVO] = RBV_DN;
