@@ -688,11 +688,25 @@ int TriBack(int w) {
 }
 
 int TriLeft(int w) {
-  return w;
+  int asig;
+  for (int i=w; i < 8; i++) {
+    Serial.println(i);  
+    
+    for (int j=0; j < MAX_INC; j++)
+      SwitchPose2((int *)&trileft[i], (int *) &trileft[(i+1)%8], j);
+  }
+  return 0;
 }
 
 int TriRight(int w) {
-  return w;
+  int asig;
+  for (int i=w; i < 8; i++) {
+    Serial.println(i);  
+   
+     for (int j=0; j < MAX_INC; j++)
+       SwitchPose2((int *)&triright[i], (int *) &triright[(i+1)%8], j);
+  }
+  return 0;  
 }
 
 void Stand(int w) {
@@ -733,11 +747,11 @@ void loop() {
       break;
     case 131:
       // Left
-      walkphase = TriLeft(walkphase);
+      walkphase = TriRight(walkphase);
       break;
     case 132:
       // right
-      walkphase = TriRight(walkphase);
+      walkphase = TriLeft(walkphase);
       break;
   }
   return; 
